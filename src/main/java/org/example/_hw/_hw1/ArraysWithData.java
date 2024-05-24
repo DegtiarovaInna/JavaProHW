@@ -1,5 +1,5 @@
 package org.example._hw._hw1;
-
+//
 import java.util.Arrays;
 
 public class ArraysWithData {

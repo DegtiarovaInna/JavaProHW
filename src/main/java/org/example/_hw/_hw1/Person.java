@@ -1,5 +1,5 @@
 package org.example._hw._hw1;
-
+//
 public class Person {
     String name;
     int age;
