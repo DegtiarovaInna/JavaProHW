@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class ArraysWithData {
     ////Создать массив String[] names для хранения имен.
-    //    ////Создать массив int[] ages для хранения возрастов.
-    //    ////Размер массивов — 10 элементов.
+       ////Создать массив int[] ages для хранения возрастов.
+      ////Размер массивов — 10 элементов.
     int size = 10;
     String[] names = new String[size];
     int[] ages = new int[size];
