@@ -1,7 +1,5 @@
 package org.example._hw._hw2;
 
-import java.lang.invoke.LambdaMetafactory;
-
 //Создайте класс BankAccount со следующими свойствами:
 //
 //owner (строка): имя владельца счета
@@ -15,11 +13,13 @@ import java.lang.invoke.LambdaMetafactory;
 //
 //Создайте несколько экземпляров класса BankAccount и протестируйте работу методов deposit, withdraw и getBalance.
 public class BankAccount {
-    private String owner;
+    //   private String owner;
     private double balance;
+    User user;
 
-    public BankAccount(String owner, double balance) {
-        this.owner = owner;
+
+    public BankAccount(User user, double balance) {
+        this.user = user;
         this.balance = balance;
     }
 
@@ -27,33 +27,30 @@ public class BankAccount {
     public void deposit(double amount) {
         if (amount > 0) {
             balance = balance + amount;
-            System.out.println("На вашем счету: " + balance);
-        } else {
-            System.out.println("Сумма должна быть положительной");
         }
     }
 
     public void withdraw(double amount) {
         if (amount > 0) {
-            if (balance >= amount) {
+            if (balance >= amount && balance > 0) {
                 balance = balance - amount;
-                System.out.println("На вашем счету осталось: " + balance);
-            } else {
-                System.out.println("На вашем счету недостаточно средств");
+
             }
-        } else {
-            System.out.println("Сумма должна быть положительной");
         }
+
     }
 
     public double getBalance() {
         return balance;
     }
-    public String getOwner(){
-        return owner;
+
+    public String getOwner() {
+        return user.toString();
     }
-    public void setOwner(String owner) {
-        this.owner = owner;
+
+    public void setOwner(String firstname, String lastname, String address) {
+        this.user = new User(firstname, lastname, address);
     }
+
 
 }
